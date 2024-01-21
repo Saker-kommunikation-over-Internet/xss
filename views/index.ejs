@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Guestbook</title>
+  </head>
+  <body>
+    <h2>Guestbook</h2>
+    <form action="/sign" method="POST">
+      <label for="entry">Sign the Guestbook:</label>
+      <input type="text" id="entry" name="entry" />
+      <input type="submit" value="Sign" />
+    </form>
+    <h3>Entries</h3>
+    <% entries.forEach(function(entry) { %>
+    <div><%- entry %></div>
+    <!-- Sårbarhet -->
+    <% }); %>
+  </body>
+</html>
